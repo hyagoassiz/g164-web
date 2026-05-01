@@ -59,7 +59,7 @@ const produtos = [
 
 export default function Home() {
   return (
-    <Box sx={{ minHeight: "100vh", background: "#ffffff", py: 2 }}>
+    <Box sx={{ minHeight: "100vh", background: "black", py: 2 }}>
       <Container maxWidth="xs">
         {/* HEADER */}
         <Box sx={{ textAlign: "center", mb: 4 }}>
@@ -67,14 +67,14 @@ export default function Home() {
             component="img"
             src="/g164.png"
             alt="logo"
-            sx={{ width: 150, mb: 1 }}
+            sx={{ width: 170, mb: 1 }}
           />
 
           <Typography
             sx={{
               fontWeight: 700,
               fontSize: 18,
-              color: "#111827",
+              color: "#ffffff",
             }}
           >
             Hot Wheels Premium mais baratos que encontrei 🔥
@@ -83,7 +83,7 @@ export default function Home() {
           <Typography
             sx={{
               fontSize: 14,
-              color: "#6b7280",
+              color: "#9ca3af",
               mt: 0.5,
             }}
           >
@@ -98,8 +98,13 @@ export default function Home() {
               key={produto.nome}
               sx={{
                 borderRadius: 3,
-                border: "1px solid #e5e7eb",
+                background: "black",
+                border: "1px solid #1f1f1f",
                 overflow: "hidden",
+                transition: "0.2s",
+                "&:hover": {
+                  transform: "scale(1.02)",
+                },
               }}
             >
               <Box
@@ -108,7 +113,7 @@ export default function Home() {
                 alt={produto.nome}
                 sx={{
                   width: "100%",
-                  background: "#f9fafb",
+                  background: "black",
                   p: 2,
                 }}
               />
@@ -118,7 +123,7 @@ export default function Home() {
                   sx={{
                     fontWeight: 600,
                     fontSize: 16,
-                    color: "#111827",
+                    color: "#f3f4f6",
                     mb: 1.5,
                   }}
                 >
@@ -142,6 +147,7 @@ export default function Home() {
                           textTransform: "none",
                           fontSize: 13,
                           py: 1.2,
+                          fontWeight: 600,
                           "&:hover": {
                             opacity: 0.9,
                           },
