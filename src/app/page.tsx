@@ -1,8 +1,10 @@
 "use client";
 
-import { Container, Typography, Card, Button, Box } from "@mui/material";
+import Link from "next/link";
+import { Container, Typography, Box } from "@mui/material";
+import { ProductList, Produto } from "@/components/ProductList";
 
-const produtos = [
+const produtos: Produto[] = [
   {
     nome: "Hot Wheels Premium - '88 Honda CRX",
     imagem: "https://m.media-amazon.com/images/I/91RgZkZJ65L.jpg",
@@ -40,7 +42,8 @@ const produtos = [
   },
   {
     nome: "Hot Wheels Premium - Nissan Skyline 2000GT-R LBKW",
-    imagem: "https://img.olx.com.br/images/73/734634389843310.jpg",
+    imagem:
+      "https://cdn.dsmcdn.com/ty1000324/product/media/images/prod/PIM/20260210/07/fafd48ea-b4b3-4d6f-b2c0-fa24d1964ed1/1_org_zoom.jpg",
     links: [
       { label: "Amazon", url: "https://amzn.to/4tZYhfB" },
       { label: "Mercado Livre", url: "https://meli.la/1Mj42M9" },
@@ -59,22 +62,24 @@ const produtos = [
 
 export default function Home() {
   return (
-    <Box sx={{ minHeight: "100vh", background: "black", py: 2 }}>
+    <Box sx={{ minHeight: "100vh", background: "white", py: 2 }}>
       <Container maxWidth="xs">
         {/* HEADER */}
         <Box sx={{ textAlign: "center", mb: 4 }}>
-          <Box
-            component="img"
-            src="/g164.png"
-            alt="logo"
-            sx={{ width: 170, mb: 1 }}
-          />
+          <Link href="/">
+            <Box
+              component="img"
+              src="/g164.png"
+              alt="logo"
+              sx={{ width: 170, mb: 1, cursor: "pointer" }}
+            />
+          </Link>
 
           <Typography
             sx={{
               fontWeight: 700,
               fontSize: 18,
-              color: "#ffffff",
+              color: "#111827",
             }}
           >
             Hot Wheels Premium mais baratos que encontrei 🔥
@@ -83,7 +88,7 @@ export default function Home() {
           <Typography
             sx={{
               fontSize: 14,
-              color: "#9ca3af",
+              color: "#6b7280",
               mt: 0.5,
             }}
           >
@@ -91,79 +96,7 @@ export default function Home() {
           </Typography>
         </Box>
 
-        {/* LISTA */}
-        <Box sx={{ display: "flex", flexDirection: "column", gap: 3 }}>
-          {produtos.map((produto) => (
-            <Card
-              key={produto.nome}
-              sx={{
-                borderRadius: 3,
-                background: "black",
-                border: "1px solid #1f1f1f",
-                overflow: "hidden",
-                transition: "0.2s",
-                "&:hover": {
-                  transform: "scale(1.02)",
-                },
-              }}
-            >
-              <Box
-                component="img"
-                src={produto.imagem}
-                alt={produto.nome}
-                sx={{
-                  width: "100%",
-                  background: "black",
-                  p: 2,
-                }}
-              />
-
-              <Box sx={{ p: 2 }}>
-                <Typography
-                  sx={{
-                    fontWeight: 600,
-                    fontSize: 16,
-                    color: "#f3f4f6",
-                    mb: 1.5,
-                  }}
-                >
-                  {produto.nome}
-                </Typography>
-
-                <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
-                  {produto.links.map((link) => {
-                    const isAmazon = link.label === "Amazon";
-
-                    return (
-                      <Button
-                        key={link.label}
-                        href={link.url}
-                        target="_blank"
-                        fullWidth
-                        sx={{
-                          background: isAmazon ? "#FF9900" : "#3483FA",
-                          color: "#fff",
-                          borderRadius: 2,
-                          textTransform: "none",
-                          fontSize: 13,
-                          py: 1.2,
-                          fontWeight: 600,
-                          "&:hover": {
-                            opacity: 0.9,
-                          },
-                        }}
-                      >
-                        {isAmazon
-                          ? "Comprar na Amazon"
-                          : "Comprar no Mercado Livre"}
-                      </Button>
-                    );
-                  })}
-                </Box>
-              </Box>
-            </Card>
-          ))}
-        </Box>
+        <ProductList produtos={produtos} />
       </Container>
     </Box>
   );
