@@ -11,6 +11,7 @@ const produtos: Produto[] = [
     links: [
       { label: "Amazon", url: "https://amzn.to/4tU6Hoz" },
       { label: "Mercado Livre", url: "https://meli.la/22hoAiX" },
+      { label: "Shopee", url: "https://shopee.com.br" },
     ],
   },
   {
@@ -20,6 +21,7 @@ const produtos: Produto[] = [
     links: [
       { label: "Amazon", url: "https://amzn.to/4mLbcQf" },
       { label: "Mercado Livre", url: "https://meli.la/1h8Bf7T" },
+      { label: "Shopee", url: "https://shopee.com.br" },
     ],
   },
   {
@@ -29,6 +31,7 @@ const produtos: Produto[] = [
     links: [
       { label: "Amazon", url: "https://amzn.to/4dWWd3f" },
       { label: "Mercado Livre", url: "https://meli.la/1JWdBe8" },
+      { label: "Shopee", url: "https://shopee.com.br" },
     ],
   },
   {
@@ -38,6 +41,7 @@ const produtos: Produto[] = [
     links: [
       { label: "Amazon", url: "https://amzn.to/4mGwNcp" },
       { label: "Mercado Livre", url: "https://meli.la/2JYnSbR" },
+      { label: "Shopee", url: "https://shopee.com.br" },
     ],
   },
   {
@@ -47,6 +51,7 @@ const produtos: Produto[] = [
     links: [
       { label: "Amazon", url: "https://amzn.to/4tZYhfB" },
       { label: "Mercado Livre", url: "https://meli.la/1Mj42M9" },
+      { label: "Shopee", url: "https://shopee.com.br" },
     ],
   },
   {
@@ -56,43 +61,64 @@ const produtos: Produto[] = [
     links: [
       { label: "Amazon", url: "https://amzn.to/3ODZ1If" },
       { label: "Mercado Livre", url: "https://meli.la/2UvNxxR" },
+      { label: "Shopee", url: "https://shopee.com.br" },
     ],
   },
 ];
 
 export default function Home() {
   return (
-    <Box sx={{ minHeight: "100vh", background: "white", py: 2 }}>
+    <Box sx={{ minHeight: "100vh", background: "#f5f7fb", py: 2 }}>
       <Container maxWidth="xs">
         {/* HEADER */}
-        <Box sx={{ textAlign: "center", mb: 4 }}>
+        <Box
+          sx={{
+            textAlign: "center",
+            mb: 4,
+            pt: 1,
+          }}
+        >
           <Link href="/">
             <Box
               component="img"
               src="/g164.png"
               alt="logo"
-              sx={{ width: 170, mb: 1, cursor: "pointer" }}
+              sx={{
+                width: 150,
+                mb: 1.5,
+                cursor: "pointer",
+                transition: "0.2s",
+                "&:hover": {
+                  transform: "scale(1.03)",
+                },
+              }}
             />
           </Link>
 
           <Typography
             sx={{
-              fontWeight: 700,
-              fontSize: 18,
+              fontWeight: 800,
+              fontSize: 22,
+              lineHeight: 1.2,
               color: "#111827",
+              letterSpacing: "-0.5px",
             }}
           >
-            Hot Wheels Premium mais baratos que encontrei 🔥
+            Os melhores Hot Wheels Premium 🔥
           </Typography>
 
           <Typography
             sx={{
               fontSize: 14,
               color: "#6b7280",
-              mt: 0.5,
+              mt: 1,
+              maxWidth: 280,
+              mx: "auto",
+              lineHeight: 1.5,
             }}
           >
-            Links confiáveis para comprar 👇
+            Compare preços entre lojas confiáveis e encontre as melhores ofertas
+            👇
           </Typography>
         </Box>
 
