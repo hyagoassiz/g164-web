@@ -11,7 +11,30 @@ const produtos: Produto[] = [
     links: [
       { label: "Amazon", url: "https://amzn.to/4tU6Hoz" },
       { label: "Mercado Livre", url: "https://meli.la/22hoAiX" },
-      { label: "Shopee", url: "https://shopee.com.br" },
+      { label: "Shopee", url: "https://s.shopee.com.br/7ppwg3KMM5" },
+    ],
+  },
+  {
+    nome: "1994 Honda Del Sol",
+    imagem:
+      "https://acdn-us.mitiendanube.com/stores/006/652/004/products/34953efbb580f18e0c8a3dfba738f869408ca651-f6a57c0b8fda86b00c17755310548683-480-0.webp",
+    links: [
+      { label: "Amazon", url: "https://amzn.to/3QWiO6x" },
+      { label: "Mercado Livre", url: "https://meli.la/1cmb2hk" },
+      { label: "Shopee", url: "https://s.shopee.com.br/8V5dU2i0CM" },
+    ],
+  },
+  {
+    nome: "1978 Dodge Li'L Red Express Truck",
+    imagem:
+      "https://acdn-us.mitiendanube.com/stores/006/652/004/products/683477c30cc5a209a8b85448b033bdc8b66e9d86-66d903e5d7114ee03c17693096019152-480-0.webp",
+    links: [
+      { label: "Amazon", url: "https://amzn.to/4u8DlDK" },
+      { label: "Mercado Livre", url: "https://meli.la/1zc9Ai2" },
+      {
+        label: "Shopee",
+        url: "https://s.shopee.com.br/3LNXKn4PbR",
+      },
     ],
   },
   {
@@ -21,7 +44,10 @@ const produtos: Produto[] = [
     links: [
       { label: "Amazon", url: "https://amzn.to/4mLbcQf" },
       { label: "Mercado Livre", url: "https://meli.la/1h8Bf7T" },
-      { label: "Shopee", url: "https://shopee.com.br" },
+      {
+        label: "Shopee",
+        url: "https://meli.la/1Cqu8z9 https://s.shopee.com.br/LjvkPg2qq",
+      },
     ],
   },
   {
@@ -31,7 +57,7 @@ const produtos: Produto[] = [
     links: [
       { label: "Amazon", url: "https://amzn.to/4dWWd3f" },
       { label: "Mercado Livre", url: "https://meli.la/1JWdBe8" },
-      { label: "Shopee", url: "https://shopee.com.br" },
+      { label: "Shopee", url: "https://s.shopee.com.br/3LNXK1Nni8" },
     ],
   },
   {
@@ -41,7 +67,7 @@ const produtos: Produto[] = [
     links: [
       { label: "Amazon", url: "https://amzn.to/4mGwNcp" },
       { label: "Mercado Livre", url: "https://meli.la/2JYnSbR" },
-      { label: "Shopee", url: "https://shopee.com.br" },
+      { label: "Shopee", url: "https://s.shopee.com.br/901u4YYfR7" },
     ],
   },
   {
@@ -51,7 +77,7 @@ const produtos: Produto[] = [
     links: [
       { label: "Amazon", url: "https://amzn.to/4tZYhfB" },
       { label: "Mercado Livre", url: "https://meli.la/1Mj42M9" },
-      { label: "Shopee", url: "https://shopee.com.br" },
+      { label: "Shopee", url: "https://s.shopee.com.br/6pxPUgDgps" },
     ],
   },
   {
@@ -61,7 +87,7 @@ const produtos: Produto[] = [
     links: [
       { label: "Amazon", url: "https://amzn.to/3ODZ1If" },
       { label: "Mercado Livre", url: "https://meli.la/2UvNxxR" },
-      { label: "Shopee", url: "https://shopee.com.br" },
+      { label: "Shopee", url: "https://s.shopee.com.br/5ApBVjYBe8" },
     ],
   },
 ];
